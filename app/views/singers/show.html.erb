@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @singer.name %>
+</p>
+
+<p>
+  <strong>Lyrics:</strong>
+  <div id="wordcloud" style="width: 1200px; height: 500px; position: relative;"></div>
+</p>
+
+<%= link_to 'Edit', edit_singer_path(@singer) %> |
+<%= link_to 'Back', singers_path %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#wordcloud").jQCloud(<%= raw @words_count.to_json %>);
+  });
+</script>
