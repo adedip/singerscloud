@@ -7,7 +7,7 @@ class Singer < ActiveRecord::Base
     word_list = []
     frequency.each do |key, value| 
       obj = {text: key, weight: value}
-      word_list << obj
+      word_list << obj if value > 1
     end
     return word_list
   end

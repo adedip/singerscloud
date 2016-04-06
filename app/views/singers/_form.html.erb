@@ -17,9 +17,9 @@
   </div>
   <div class="field">
     <%= f.label :lyrics %><br>
-    <%= f.text_area :lyrics %>
+    <%= f.text_area :lyrics, style: "height: 300px" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Salva', class: 'button secondary' %>
   </div>
 <% end %>

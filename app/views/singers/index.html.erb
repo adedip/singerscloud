@@ -1,28 +1,26 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Singers</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Lyrics</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @singers.each do |singer| %>
+<div class="row">
+  <div class="large-24">
+    <h1>Cantanti</h1>
+    <table width="100%">
+    <thead>
       <tr>
-        <td><%= singer.name %></td>
-        <td><%= link_to 'Show', singer %></td>
-        <td><%= link_to 'Edit', edit_singer_path(singer) %></td>
-        <td><%= link_to 'Destroy', singer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>nome</th>
+        <th colspan="2"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Singer', new_singer_path %>
+    <tbody>
+      <% @singers.each do |singer| %>
+        <tr>
+          <td><%= singer.name %></td>
+          <td><%= link_to 'Mostra', singer %></td>
+          <td><%= link_to 'Modifica', edit_singer_path(singer) %></td>
+          <!--<td><%= link_to 'Destroy', singer, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'Nuovo cantante', new_singer_path, class: 'button secondary' %>
+  </div>
+</div>
