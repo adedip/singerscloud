@@ -1,7 +1,7 @@
 class Singer < ActiveRecord::Base
 
   def words_count
-    words = self.lyrics.gsub(/\,|\.|\!|\?/, '').split(' ')
+    words = self.lyrics.gsub(/\,|\.+|\!|\?|\"/, '').split(' ')
     frequency = Hash.new(0)
     words.each { |word| frequency[word.downcase] += 1 if word.length > 3}
     word_list = []
