@@ -1,26 +1,16 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
-  <div class="large-24">
-    <h1>Cantanti</h1>
-    <table width="100%">
-    <thead>
-      <tr>
-        <th>nome</th>
-        <th colspan="2"></th>
-      </tr>
-    </thead>
-
-    <tbody>
+  <div class="large-24 center">
+    <h1 class="home_title">
+      <%= link_to 'Cantanti', root_path %>
+    </h1>
+    
+    <ul id="singers_list">
       <% @singers.each do |singer| %>
-        <tr>
-          <td><%= singer.name %></td>
-          <td><%= link_to 'Mostra', singer %></td>
-          <td><%= link_to 'Modifica', edit_singer_path(singer) %></td>
-          <!--<td><%= link_to 'Destroy', singer, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-        </tr>
+        <li>
+          <%= link_to singer.name, singer %>
+        </li>
       <% end %>
-    </tbody>
-  </table>
-  <%= link_to 'Nuovo cantante', new_singer_path, class: 'button secondary' %>
+    </ul>
   </div>
 </div>

@@ -1,3 +1,57 @@
-// Place all the styles related to the Singers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body.singers.index{
+  background-image: image-url('sc_img_sfondo.png');
+  background-size: cover;
+  font-family: 'Amatic SC', sans-serif;
+}
+
+a, h2{
+  font-family: 'Amatic SC', sans-serif;
+}
+
+a:hover{
+  opacity: 0.8;
+  background: transparent;
+}
+
+h1.home_title a{
+  text-indent: -9999px;
+  background-image: image-url('sc_logo_home.png');
+  background-size: 400px;
+  width: 400px;
+  height: 320px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+h1.home_title a:hover{
+  background-color: transparent;
+  opacity: 0.8;
+}
+
+h2{
+  text-align: center;
+}
+
+.inner-logo{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 1000;
+}
+
+.inner-logo img{
+  width: 200px;
+}
+
+ul#singers_list{
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  list-style: none;
+}
+
+ul#singers_list li a{
+  color: #fff;
+  font-size: 30px;
+}

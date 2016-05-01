@@ -1,19 +1,20 @@
 <div class="row">
   <div class="large-24">
-    <p id="notice"><%= notice %></p>
-
-    <h2>
-      <%= @singer.name %>
-    </h2>
+    <%= link_to image_tag('sc_logo_black'), root_path, class: 'inner-logo' %>
   </div>
 </div>
-    <div id="wordcloud" style="width: 1200px; height: 500px; position: relative;"></div>
 <div class="row">
   <div class="large-24">
-    <%= link_to 'modifica', edit_singer_path(@singer), class: 'button secondary small' %>
-    <%= link_to 'indietro', singers_path, class: 'button secondary small' %>
+    <p id="notice"><%= notice %></p>
   </div>
 </div>
+<div id="wordcloud" style="width: 1200px; height: 500px; position: relative;"></div>
+<div class="row">
+  <div class="large-24 center">
+    <h2><%= @singer.name %></h2>
+  </div>
+</div>
+
 <script type="text/javascript">
   $(document).ready(function() {
     $("#wordcloud").jQCloud(<%= raw @words_count.to_json %>);
