@@ -5,7 +5,6 @@
 #   gem 'sqlite3'
 #
 development:
-  development:
   adapter: postgresql
   encoding: unicode
   database: singer_cloud_dev
@@ -14,8 +13,7 @@ development:
   port: 5432
   username: andreadippolito
 
-development:
-  development:
+production:
   adapter: postgresql
   encoding: unicode
   database: singers_cloud_prod
