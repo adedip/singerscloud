@@ -13,3 +13,14 @@ development:
   host: localhost
   port: 5432
   username: andreadippolito
+
+development:
+  development:
+  adapter: postgresql
+  encoding: unicode
+  database: singers_cloud_prod
+  pool: 5
+  host: localhost
+  port: 5432
+  username: adedip
+  password: 13Settembre
